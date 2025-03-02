@@ -8,7 +8,7 @@ import { ModeToggle } from './DarkModeToggle'
 function Header() {
   return (
     <header className="sticky top-0 left-0 right-0 px-4 md:px-6 
-     bg-gray-900/90 backdrop-blur-md border-b border-gray-800 z-50 shadow-sm">
+     bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 z-50 shadow-sm">
         <div className='container mx-auto'>
             <div className='flex items-center justify-between h-20'>
                 {/* Left - Brand */}
@@ -17,8 +17,8 @@ function Header() {
                         <div className="transform transition-transform duration-300 group-hover:rotate-12">
                             <AgentPulse size='small' color='green'/>
                         </div>
-                        <h1 className='text-2xl font-bold bg-gradient-to-r from-green-400 
-                        to-green-300 bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105'>Daddy Yo</h1>
+                        <h1 className='text-2xl font-bold bg-gradient-to-r from-green-600 
+                        to-green-400 bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105'>Daddy Yo</h1>
                     </Link>
                 </div>
                 
@@ -37,15 +37,15 @@ function Header() {
                     </SignedIn>
 
                     <SignedOut>
-                        <SignInButton>
-                        {/* <Link href="/sign-in"> */}
-                            <Button
-                                variant="ghost"
-                                className="text-gray-300 hover:text-green-400 hover:bg-gray-800 mr-2"
-                            >
-                                Sign In
-                            </Button>
-                        {/* </Link> */}
+                        <SignInButton mode='modal'>
+                            {/* <Link href="/sign-in"> */}
+                                <Button
+                                    variant="ghost"
+                                    className="text-gray-700 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/20 mr-2"
+                                >
+                                    Sign In
+                                </Button>
+                            {/* </Link> */}
                         </SignInButton>
                     </SignedOut>
                 </div>
